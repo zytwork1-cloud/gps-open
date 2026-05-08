@@ -1,1 +1,20 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Open GPS</title>
+</head>
+<body>
 
+<script>
+const params = new URLSearchParams(location.search);
+const url = params.get("url");
+
+if (url) {
+    location.href = decodeURIComponent(url);
+} else {
+    document.body.innerHTML = "No URL";
+}
+</script>
+
+</body>
+</html>
